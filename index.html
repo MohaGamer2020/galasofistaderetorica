@@ -8,28 +8,34 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f8f0ff, #e0d4ff);
+      background: linear-gradient(135deg, #f0e6ff, #dbcaff);
       color: #2d0353;
       text-align: center;
       animation: fadeIn 1.5s ease-in;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     .logo {
-      max-width: 300px;
+      max-width: 280px;
       margin: 40px auto 20px;
       display: block;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
 
     h1 {
-      font-size: 2.2em;
-      margin-bottom: 10px;
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px #b388eb;
     }
 
     .buttons {
@@ -44,15 +50,35 @@
       text-decoration: none;
       background: #6a0dad;
       color: white;
-      padding: 12px 24px;
+      padding: 14px 26px;
       border-radius: 30px;
       font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
-      width: 200px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      width: 220px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .buttons a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-20deg);
+      transition: left 0.5s ease;
+    }
+
+    .buttons a:hover::before {
+      left: 100%;
     }
 
     .buttons a:hover {
-      background: #7f21d3;
+      background: #7e3ff2;
       transform: scale(1.05);
     }
 
@@ -65,19 +91,19 @@
 </head>
 <body>
 
-  <img src="https://raw.githubusercontent.com/MohaGamer2020/galasofistaderetorica/main/93c0f58b-08c7-422f-ba51-403ab9fb0b51.jpg" alt="Logo Gala Sofista" class="logo">
+  <img src="https://github.com/MohaGamer2020/galasofistaderetorica/blob/main/93c0f58b-08c7-422f-ba51-403ab9fb0b51-removebg-preview.png?raw=true" 
+       alt="Logo Gala Sofista" class="logo">
 
   <h1>Bienvenidos a la Gala Sofista de Retórica</h1>
 
   <div class="buttons">
     <a href="https://forms.office.com/r/4enRKKZTCb" target="_blank">Grupo 1</a>
     <a href="https://forms.office.com/r/dnwZ0rvWVJ" target="_blank">Grupo 2</a>
-    <!-- Puedes añadir más grupos así: -->
-    <!-- <a href="https://forms.office.com/r/tu_formulario">Grupo 3</a> -->
+    <!-- Puedes seguir añadiendo más grupos copiando la línea de arriba -->
   </div>
 
   <footer>
-    © 2025 Gala Sofista - Instituto Severo Ochoa
+    © 2025 Gala Sofista – Instituto Severo Ochoa
   </footer>
 
 </body>
