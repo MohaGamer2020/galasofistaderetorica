@@ -2,118 +2,82 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Gala Sofista de Retórica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gala Sofista de Retórica</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
-
     body {
-      background: linear-gradient(135deg, #1c1c2b, #2d2d44);
-      color: white;
-      font-family: 'Playfair Display', serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f8f0ff, #e0d4ff);
+      color: #2d0353;
       text-align: center;
-      padding: 50px 20px;
-      animation: fadeIn 2s ease-out;
+      animation: fadeIn 1.5s ease-in;
     }
 
-    /* Animación de desvanecimiento */
     @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    img.logo {
-      width: 250px;
-      margin-bottom: 20px;
-      animation: bounce 1.5s infinite alternate;
-    }
-
-    /* Animación de rebote del logo */
-    @keyframes bounce {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-15px);
-      }
+    .logo {
+      max-width: 300px;
+      margin: 40px auto 20px;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 40px;
-      color: #f0d75d;
-      animation: slideIn 1s ease-out;
+      font-size: 2.2em;
+      margin-bottom: 10px;
     }
 
-    /* Animación de deslizamiento del título */
-    @keyframes slideIn {
-      0% {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
     }
 
-    .grupo {
-      margin: 15px;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    /* Animación de subida de los botones */
-    @keyframes fadeInUp {
-      0% {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    .grupo a {
-      display: inline-block;
-      background: #f0d75d;
-      color: #1c1c2b;
-      padding: 12px 30px;
-      border-radius: 8px;
+    .buttons a {
       text-decoration: none;
+      background: #6a0dad;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
       font-weight: bold;
-      transition: all 0.3s ease;
+      transition: background 0.3s, transform 0.2s;
+      width: 200px;
     }
 
-    .grupo a:hover {
-      background: #fff09c;
-      transform: scale(1.1);
+    .buttons a:hover {
+      background: #7f21d3;
+      transform: scale(1.05);
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 40px;
       font-size: 0.9em;
-      color: #bbbbbb;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-<img src="https://raw.githubusercontent.com/MohaGamer2020/galasofistaderetorica/main/93c0f58b-08c7-422f-ba51-403ab9fb0b51.jpg" alt="Logo Gala Sofista" style="max-width: 300px;">
+  <img src="https://raw.githubusercontent.com/MohaGamer2020/galasofistaderetorica/main/93c0f58b-08c7-422f-ba51-403ab9fb0b51.jpg" alt="Logo Gala Sofista" class="logo">
 
+  <h1>Bienvenidos a la Gala Sofista de Retórica</h1>
 
-  <h1>La Gala Sofista de Retórica</h1>
-  <p>Selecciona tu grupo para acceder al formulario</p>
-
-  <div class="grupo"><a href="https://forms.office.com/r/4enRKKZTCb" target="_blank">Grupo 1</a></div>
-  <div class="grupo"><a href="https://forms.office.com/r/dnwZ0rvWVJ" target="_blank">Grupo 2</a></div>
+  <div class="buttons">
+    <a href="https://forms.office.com/r/4enRKKZTCb" target="_blank">Grupo 1</a>
+    <a href="https://forms.office.com/r/dnwZ0rvWVJ" target="_blank">Grupo 2</a>
+    <!-- Puedes añadir más grupos así: -->
+    <!-- <a href="https://forms.office.com/r/tu_formulario">Grupo 3</a> -->
+  </div>
 
   <footer>
-    © 2025 La Gala Sofista – Instituto Severo Ochoa
+    © 2025 Gala Sofista - Instituto Severo Ochoa
   </footer>
 
 </body>
