@@ -8,62 +8,70 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f5d1ff, #c3f0ff);
+      background: linear-gradient(135deg, #0b0c2a, #1a1a3d);
+      color: #fdd76e;
       text-align: center;
-      color: #2d0353;
-      animation: fadeIn 2s ease-in;
+      overflow-x: hidden;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
+    /* Animación de entrada del logo */
     .logo {
-      width: 250px;
-      margin-top: 40px;
-      animation: float 4s infinite ease-in-out;
+      width: 300px;
+      margin-top: 60px;
+      animation: logoIntro 2.5s ease forwards;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0); }
+    @keyframes logoIntro {
+      0% {
+        transform: scale(3);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     h1 {
-      font-size: 2.5em;
-      margin-top: 20px;
+      font-size: 2.7em;
+      margin-top: 30px;
+      color: #fdd76e;
+      text-shadow: 1px 1px 5px #00000090;
     }
 
     .buttons {
-      margin-top: 40px;
+      margin-top: 50px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 25px;
       align-items: center;
     }
 
     .buttons a {
-      background: #6a0dad;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 40px;
-      text-decoration: none;
+      background-color: #0d1b2a;
+      border: 2px solid #ffd700;
+      color: #ffd700;
+      padding: 14px 30px;
+      border-radius: 30px;
       font-size: 1.3em;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
 
     .buttons a:hover {
-      background: #8333dd;
+      background-color: #ffd700;
+      color: #0d1b2a;
+      border: 2px solid #0d1b2a;
       transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
+      padding: 20px;
       font-size: 0.9em;
-      color: #444;
+      color: #aaa;
     }
   </style>
 </head>
