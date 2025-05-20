@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Gala Sofista de Retórica</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+    body {
+      background: linear-gradient(135deg, #1c1c2b, #2d2d44);
+      color: white;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      padding: 50px 20px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    /* Animación de desvanecimiento */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    img.logo {
+      width: 250px;
+      margin-bottom: 20px;
+      animation: bounce 1.5s infinite alternate;
+    }
+
+    /* Animación de rebote del logo */
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-15px);
+      }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #f0d75d;
+      animation: slideIn 1s ease-out;
+    }
+
+    /* Animación de deslizamiento del título */
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .grupo {
+      margin: 15px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Animación de subida de los botones */
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .grupo a {
+      display: inline-block;
+      background: #f0d75d;
+      color: #1c1c2b;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .grupo a:hover {
+      background: #fff09c;
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #bbbbbb;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://www.mediafire.com/file/l45r5yp0d8a2vm0/Bienvenidos+a+la+Gala+Sofista.png/file" alt="Logo La Gala Sofista" class="logo">
+
+  <h1>La Gala Sofista de Retórica</h1>
+  <p>Selecciona tu grupo para acceder al formulario</p>
+
+  <div class="grupo"><a href="https://forms.office.com/r/4enRKKZTCb" target="_blank">Grupo 1</a></div>
+  <div class="grupo"><a href="https://forms.office.com/r/dnwZ0rvWVJ" target="_blank">Grupo 2</a></div>
+
+  <footer>
+    © 2025 La Gala Sofista – Instituto Severo Ochoa
+  </footer>
+
+</body>
+</html>
