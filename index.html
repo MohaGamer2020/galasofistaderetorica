@@ -2,142 +2,138 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gala Sofista de Retórica</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #0d1b2a, #002147);
-      color: #FFD700;
+      background-color: #0a0f2c;
+      color: white;
       text-align: center;
-      animation: fadeIn 2s ease-in;
+      overflow-x: hidden;
     }
 
     header img {
-      width: 200px;
-      animation: logoZoom 2s ease-out forwards;
+      width: 80%;
+      max-width: 300px;
+      margin-top: 40px;
+      animation: shrinkLogo 2s ease forwards;
     }
 
-    h1 {
-      margin-top: 20px;
-      font-size: 2em;
-      text-shadow: 2px 2px #000;
+    @keyframes shrinkLogo {
+      0% {
+        transform: scale(2);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
-    .button-container {
-      margin: 40px auto;
+    .buttons {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      padding: 30px 10px 80px;
     }
 
-    a.button {
+    .form-button {
+      background-color: #0a0f2c;
+      border: 2px solid gold;
+      color: gold;
+      padding: 15px 25px;
+      margin: 12px 0;
       text-decoration: none;
-      background: #001F3F;
-      color: #FFD700;
-      border: 2px solid #FFD700;
-      padding: 15px 40px;
+      font-size: 18px;
       border-radius: 10px;
-      font-size: 1.1em;
-      font-weight: bold;
-      width: 280px;
-      transition: all 0.4s ease;
-      box-shadow: 0 0 10px #FFD70080;
-      position: relative;
-      overflow: hidden;
+      transition: all 0.3s ease;
+      width: 90%;
+      max-width: 400px;
     }
 
-    a.button::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: #FFD700;
-      transition: all 0.4s ease;
-      z-index: 0;
+    .form-button:hover {
+      background-color: gold;
+      color: #0a0f2c;
+      transform: scale(1.05);
     }
 
-    a.button:hover::before {
-      left: 0;
-    }
-
-    a.button span {
-      position: relative;
-      z-index: 1;
-    }
-
-    a.button:hover {
-      color: #001F3F;
-      border-color: #001F3F;
+    .form-button.active {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px gold;
     }
 
     footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #ccc;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #0a0f2c;
+      color: white;
+      font-size: 14px;
+      padding: 12px 0;
+      border-top: 1px solid gold;
     }
 
-    @keyframes logoZoom {
-      0% { transform: scale(2); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .button-container a.button {
-      transition: transform 0.3s ease-out;
+    @media (min-width: 768px) {
+      .form-button {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="https://github.com/MohaGamer2020/galasofistaderetorica/blob/main/logo-gala.png?raw=true" alt="Logo Gala Sofista">
-    <h1>Bienvenidos a la Gala Sofista de Retórica</h1>
+    <img src="https://github.com/MohaGamer2020/galasofistaderetorica/blob/main/logo-gala.png?raw=true" alt="Logo Gala Sofista" />
   </header>
 
-  <div class="button-container">
-    <a class="button" href="https://forms.office.com/r/Pc0jiP9JbK" target="_blank"><span>La educación</span></a>
-    <a class="button" href="https://forms.office.com/r/2huURzQXJv" target="_blank"><span>La Inteligencia Artificial</span></a>
-    <a class="button" href="https://forms.office.com/r/J1Rbwy2JqF" target="_blank"><span>Turismo de masas</span></a>
-    <a class="button" href="https://forms.office.com/r/9sCyjEzBqQ" target="_blank"><span>La Inmigración</span></a>
-    <a class="button" href="https://forms.office.com/r/ugbkfZ6tZH" target="_blank"><span>Analfabetismo emocional</span></a>
-    <a class="button" href="https://forms.office.com/r/rJ5u0zYJXb" target="_blank"><span>Acoso</span></a>
-    <a class="button" href="https://forms.office.com/r/dRh2Wb48Wv" target="_blank"><span>Captura de datos</span></a>
-    <a class="button" href="https://forms.office.com/r/hP2YmGAhpX" target="_blank"><span>Transhumanismo y amortalidad</span></a>
-    <a class="button" href="https://forms.office.com/r/jXncyjhUZX" target="_blank"><span>Igualdad</span></a>
-    <a class="button" href="https://forms.office.com/r/7v6DLbzkxM" target="_blank"><span>Redes Sociales</span></a>
-    <a class="button" href="https://forms.office.com/r/APkGw3iqSU" target="_blank"><span>Divorcio</span></a>
-    <a class="button" href="https://forms.office.com/r/esA6VCvERY" target="_blank"><span>Neoliberalismo</span></a>
-    <a class="button" href="https://forms.office.com/r/9SRbR5cHxQ" target="_blank"><span>Futuro económico de Marruecos</span></a>
-    <a class="button" href="https://forms.office.com/r/Fi8QB2xyuc" target="_blank"><span>Guerra</span></a>
+  <div class="buttons" id="buttons">
+    <a href="https://forms.office.com/r/Pc0jiP9JbK" class="form-button">La educación</a>
+    <a href="https://forms.office.com/r/2huURzQXJv" class="form-button">La Inteligencia Artificial</a>
+    <a href="https://forms.office.com/r/J1Rbwy2JqF" class="form-button">Turismo de masas</a>
+    <a href="https://forms.office.com/r/9sCyjEzBqQ" class="form-button">La Inmigración</a>
+    <a href="https://forms.office.com/r/ugbkfZ6tZH" class="form-button">Analfabetismo emocional</a>
+    <a href="https://forms.office.com/r/rJ5u0zYJXb" class="form-button">Acoso</a>
+    <a href="https://forms.office.com/r/dRh2Wb48Wv" class="form-button">Captura de datos</a>
+    <a href="https://forms.office.com/r/hP2YmGAhpX" class="form-button">Transhumanismo y amortalidad</a>
+    <a href="https://forms.office.com/r/jXncyjhUZX" class="form-button">Igualdad</a>
+    <a href="https://forms.office.com/r/7v6DLbzkxM" class="form-button">Redes Sociales</a>
+    <a href="https://forms.office.com/r/APkGw3iqSU" class="form-button">Divorcio</a>
+    <a href="https://forms.office.com/r/esA6VCvERY" class="form-button">Neoliberalismo</a>
+    <a href="https://forms.office.com/r/9SRbR5cHxQ" class="form-button">Futuro económico de Marruecos</a>
+    <a href="https://forms.office.com/r/Fi8QB2xyuc" class="form-button">Guerra</a>
   </div>
 
   <footer>
-    © 2025 Gala Sofista – Instituto Severo Ochoa
+    © 2025 Gala Sofista de Retórica | Severo Ochoa Tánger
   </footer>
 
   <script>
-    const buttons = document.querySelectorAll(".button");
-    const resizeOnScroll = () => {
-      const center = window.innerHeight / 2;
+    const buttons = document.querySelectorAll('.form-button');
+
+    function activateCenteredButton() {
+      let middleY = window.innerHeight / 2;
+      let closest = null;
+      let closestDistance = Infinity;
+
       buttons.forEach(btn => {
         const rect = btn.getBoundingClientRect();
-        const distance = Math.abs(center - (rect.top + rect.height / 2));
-        const scale = Math.max(1, 1.5 - distance / 300);
-        btn.style.transform = `scale(${scale})`;
-      });
-    };
-    window.addEventListener("scroll", resizeOnScroll);
-    window.addEventListener("load", resizeOnScroll);
-  </script>
+        const btnMiddle = rect.top + rect.height / 2;
+        const distance = Math.abs(btnMiddle - middleY);
 
+        if (distance < closestDistance) {
+          closest = btn;
+          closestDistance = distance;
+        }
+      });
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      if (closest) closest.classList.add('active');
+    }
+
+    window.addEventListener('scroll', activateCenteredButton);
+    window.addEventListener('load', activateCenteredButton);
+  </script>
 </body>
 </html>
