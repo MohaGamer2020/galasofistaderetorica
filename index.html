@@ -30,26 +30,49 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 20px;
     }
 
     a.button {
       text-decoration: none;
-      background-color: #002147;
+      background: #001F3F;
       color: #FFD700;
       border: 2px solid #FFD700;
-      padding: 12px 30px;
-      border-radius: 8px;
-      font-size: 1em;
-      transition: all 0.3s ease;
-      width: 200px;
+      padding: 15px 40px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      font-weight: bold;
+      width: 280px;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 10px #FFD70080;
+      position: relative;
+      overflow: hidden;
+    }
+
+    a.button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: #FFD700;
+      transition: all 0.4s ease;
+      z-index: 0;
+    }
+
+    a.button:hover::before {
+      left: 0;
+    }
+
+    a.button span {
+      position: relative;
+      z-index: 1;
     }
 
     a.button:hover {
-      background-color: #FFD700;
-      color: #002147;
-      border-color: #002147;
-      transform: scale(1.05);
+      color: #001F3F;
+      border-color: #001F3F;
     }
 
     footer {
@@ -77,20 +100,20 @@
   </header>
 
   <div class="button-container">
-    <a class="button" href="https://forms.office.com/r/Pc0jiP9JbK" target="_blank">Grupo 1</a>
-    <a class="button" href="https://forms.office.com/r/FORM2" target="_blank">Grupo 2</a>
-    <a class="button" href="https://forms.office.com/r/FORM3" target="_blank">Grupo 3</a>
-    <a class="button" href="https://forms.office.com/r/FORM4" target="_blank">Grupo 4</a>
-    <a class="button" href="https://forms.office.com/r/FORM5" target="_blank">Grupo 5</a>
-    <a class="button" href="https://forms.office.com/r/FORM6" target="_blank">Grupo 6</a>
-    <a class="button" href="https://forms.office.com/r/FORM7" target="_blank">Grupo 7</a>
-    <a class="button" href="https://forms.office.com/r/FORM8" target="_blank">Grupo 8</a>
-    <a class="button" href="https://forms.office.com/r/FORM9" target="_blank">Grupo 9</a>
-    <a class="button" href="https://forms.office.com/r/FORM10" target="_blank">Grupo 10</a>
-    <a class="button" href="https://forms.office.com/r/FORM11" target="_blank">Grupo 11</a>
-    <a class="button" href="https://forms.office.com/r/FORM12" target="_blank">Grupo 12</a>
-    <a class="button" href="https://forms.office.com/r/FORM13" target="_blank">Grupo 13</a>
-    <a class="button" href="https://forms.office.com/r/FORM14" target="_blank">Grupo 14</a>
+    <a class="button" href="https://forms.office.com/r/Pc0jiP9JbK" target="_blank"><span>La educación</span></a>
+    <a class="button" href="https://forms.office.com/r/2huURzQXJv" target="_blank"><span>La Inteligencia Artificial</span></a>
+    <a class="button" href="https://forms.office.com/r/J1Rbwy2JqF" target="_blank"><span>Turismo de masas</span></a>
+    <a class="button" href="https://forms.office.com/r/9sCyjEzBqQ" target="_blank"><span>La Inmigración</span></a>
+    <a class="button" href="https://forms.office.com/r/ugbkfZ6tZH" target="_blank"><span>Analfabetismo emocional</span></a>
+    <a class="button" href="https://forms.office.com/r/rJ5u0zYJXb" target="_blank"><span>Acoso</span></a>
+    <a class="button" href="https://forms.office.com/r/dRh2Wb48Wv" target="_blank"><span>Captura de datos</span></a>
+    <a class="button" href="https://forms.office.com/r/hP2YmGAhpX" target="_blank"><span>Transhumanismo y amortalidad</span></a>
+    <a class="button" href="https://forms.office.com/r/jXncyjhUZX" target="_blank"><span>Igualdad</span></a>
+    <a class="button" href="https://forms.office.com/r/7v6DLbzkxM" target="_blank"><span>Redes Sociales</span></a>
+    <a class="button" href="https://forms.office.com/r/APkGw3iqSU" target="_blank"><span>Divorcio</span></a>
+    <a class="button" href="https://forms.office.com/r/esA6VCvERY" target="_blank"><span>Neoliberalismo</span></a>
+    <a class="button" href="https://forms.office.com/r/9SRbR5cHxQ" target="_blank"><span>Futuro económico de Marruecos</span></a>
+    <a class="button" href="https://forms.office.com/r/Fi8QB2xyuc" target="_blank"><span>Guerra</span></a>
   </div>
 
   <footer>
