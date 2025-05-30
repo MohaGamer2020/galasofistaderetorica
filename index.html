@@ -90,6 +90,10 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    .button-container a.button {
+      transition: transform 0.3s ease-out;
+    }
   </style>
 </head>
 <body>
@@ -119,6 +123,21 @@
   <footer>
     © 2025 Gala Sofista – Instituto Severo Ochoa
   </footer>
+
+  <script>
+    const buttons = document.querySelectorAll(".button");
+    const resizeOnScroll = () => {
+      const center = window.innerHeight / 2;
+      buttons.forEach(btn => {
+        const rect = btn.getBoundingClientRect();
+        const distance = Math.abs(center - (rect.top + rect.height / 2));
+        const scale = Math.max(1, 1.5 - distance / 300);
+        btn.style.transform = `scale(${scale})`;
+      });
+    };
+    window.addEventListener("scroll", resizeOnScroll);
+    window.addEventListener("load", resizeOnScroll);
+  </script>
 
 </body>
 </html>
