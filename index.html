@@ -43,8 +43,9 @@
       padding: 30px 10px;
       flex-grow: 1;
       justify-content: flex-start;
-      height: 100%;
-      overflow: hidden;
+      overflow-y: auto;
+      max-height: 100%;
+      -webkit-overflow-scrolling: touch; /* Habilita el deslizamiento suave en iOS */
     }
 
     .form-button {
