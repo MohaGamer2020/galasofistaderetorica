@@ -99,6 +99,44 @@
         font-size: 20px;
       }
     }
+
+    /* Estilo especial para el botón "Sugerencias" */
+    .rainbow-border {
+      position: relative;
+      z-index: 0;
+      border: none;
+      background: transparent;
+      color: gold;
+    }
+
+    .rainbow-border::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+      background-size: 400% 400%;
+      animation: rotateBorder 6s linear infinite;
+      border-radius: 12px;
+      padding: 3px;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+
+    @keyframes rotateBorder {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 400% 50%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -121,9 +159,7 @@
     <a href="https://forms.office.com/r/esA6VCvERY" class="form-button">Neoliberalismo</a>
     <a href="https://forms.office.com/r/9SRbR5cHxQ" class="form-button">Futuro económico de Marruecos</a>
     <a href="https://forms.office.com/r/Fi8QB2xyuc" class="form-button">Guerra</a>
-    <a href="https://forms.office.com/r/q3y7mNGv4c" class="form-button">La Gala</a>
-    <a href="https://forms.office.com/r/xcbzqtBaA7" class="form-button">Críticas</a>
-    <a href="https://forms.office.com/r/whdLbAKU3h" class="form-button">Sugerencias</a>
+    <a href="https://forms.office.com/r/whdLbAKU3h" class="form-button rainbow-border">Sugerencias</a>
   </div>
 
   <button id="backToTop" onclick="scrollToTop()">⬆</button>
